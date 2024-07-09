@@ -31,9 +31,10 @@ footer {
 }
 
 #portal_button {
-	position: fixed;
+	position: absolute;
 	right: 30px;
-	top: 10px;
+	top: 5px;
+	
 }
 
 a {
@@ -49,6 +50,7 @@ a {
 }
 
 #newsfeed {
+	text-align: center;
 	max-width: 600px;
 	min-width: 600px;
 }
