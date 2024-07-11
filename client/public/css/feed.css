@@ -13,6 +13,34 @@ header {
 	font-size: 30px;
 	color: white;
 }
+header h1 {
+	position: absolute;
+	left: 2%;
+	font-size: 35px;
+  }
+
+header h2 {
+	text-decoration: none;
+	position: absolute;
+	left: 84%;
+	font-size: 35px;
+	
+  }
+header h3 {
+	text-decoration: none;
+	position: absolute;
+	left: 44%;
+	font-size: 35px;
+  }
+body {
+  background-image: url("/images/zmzyd64l.png");
+  background-repeat: repeat-y;
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
 
 main {
 	display: grid;
@@ -23,7 +51,7 @@ main {
 footer {
 	position: absolute;
 	left: 0px;
-  bottom: 0px;
+  	bottom: -1200px;
 	width: 100%;
 	background-color: red;
 	text-align: center;
@@ -38,8 +66,12 @@ footer {
 }
 
 a {
-	color: blue;
+	color: #7D7D7D;
 	text-decoration: none;
+	text-size-adjust: 300px;
+	text-align: match-parent;
+	border-bottom: 2px solid red;
+	
 }
 
 #redfox{
@@ -47,6 +79,7 @@ a {
 	float: left;
 	height: 50px;
 	bottom: 5px;
+	
 }
 
 #newsfeed {
@@ -58,4 +91,25 @@ a {
 .feedImage {
 	max-width: 150px;
 	max-height: 150px;
+}
+
+.myClass {
+	color: white;
+	text-decoration: none; 
+}
+
+.currentStories {
+	max-width: 150px;
+	max-height: 150px;
+	color: white;
+}
+
+#ImageSize {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.goBack {
+	color:white;
+	text-decoration: none;
 }
