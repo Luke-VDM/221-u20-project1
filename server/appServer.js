@@ -11,4 +11,10 @@ app.get('/feed', function(req, res) {
 })
 
 
+//API endpoints
+//const userRoutes = require("./routes/userRoutes");
+//app.use("/api/users", userRoutes);
+
+
 app.listen(1337, () => console.log('Listening on port 1337.'))
+

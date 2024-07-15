@@ -26,6 +26,7 @@ function onSpacebarPress(event) {
 }
 
 document.addEventListener('keydown', onSpacebarPress);
+
 //fadeText.onclick = () => {
 // window.location = "/feed"
 //}
