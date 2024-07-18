@@ -2,10 +2,13 @@ let feedItem = require('../model/feedItem');
 
 let feedItems = [];
 
-let newfeedItem = feedItem.createItem("BREAKING NEWS!!", "Marist ranked #1 Study Abroad program", 'https://www.marist.edu/study-abroad/', 'images/3fivuek6.png');
-feedItems.push(newfeedItem);
+let newfeedItem1 = feedItem.createItem("BREAKING NEWS!!", "Marist ranked #1 Study Abroad program", 'https://www.marist.edu/study-abroad/', 'images/3fivuek6.png');
+feedItems.push(newfeedItem1);
+let newfeedItem2 = feedItem.createItem("BREAKING NEWS!!", "Andrea Conner Appointed Marist College Vice President of Student Affairs", 'https://www.marist.edu/w/new-vp-student-affairs-2024', 'images/58cuu4jt.png');
+feedItems.push(newfeedItem2);
+let newfeedItem3 = feedItem.createItem("BREAKING NEWS!!", "Marist Poll Renovation Ushers in New Era of Research and Educational Opportunities", 'https://www.marist.edu/w/marist-poll-renovation-2024', 'images/x1u5z36b.png');
+feedItems.push(newfeedItem3);
 exports.getfeedItem = (req, res) => {
-    console.log("hello")
     res.setHeader("Content-Type", 'application/json');
     res.send(JSON.stringify(feedItems[req.params.itemId]));
 }
@@ -16,10 +19,10 @@ exports.getfeedItems = (req, res) => {
 }
 
 exports.saveItem = (req, res) => {
-    let newItem = feedItems.feedItem(req.body.title, req.body.body, req.body.linkUrl, req.body.imageUrl);
+    let newItem = feedItem.createItem(req.body.title, req.body.body, req.body.linkUrl, req.body.imageUrl);
     feedItems.push(newItem);
     res.setHeader('Content-Type', 'application/json');
-    res.send(feedItems);
+    res.send(feedItem);
 }
 
 exports.deleteItem = (req, res) => {
@@ -30,7 +33,6 @@ exports.deleteItem = (req, res) => {
 
 exports.updateItem = (req, res) => {
 	var updatedItem = feedItems;
-	console.log(req.body.title);
 	if(req.body.title)
 
 		updatedItem.title = req.body.title;

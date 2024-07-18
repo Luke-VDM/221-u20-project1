@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const bodyParser = require('body-parser');
 app.use(express.static('client/public'));
-app.use(express.static('client/public'));
+app.use(bodyParser.json({ type: 'application/json'}));
 
 app.get('/', function(req, res) {
     res.sendFile('index.html', {root: './client/views'})
